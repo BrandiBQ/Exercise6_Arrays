@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercise 6: Arrays</title>    
+    <style>
+        .planet {
+                color: green;
+                font-weight: bold;
+                }
+        
+        #sunny  {
+                list-style: decimal;            
+                }       
+    </style>
+</head>
+
+<body>
+    <div id="main">        
+        <script>
+            var planetNames         = ["Jupiter", "Venus", "Saturn", "Mars", "Caprica", "Kobol"];
+            var distancesFromEarth  = [5.2, 0.72, 9.5, 1.5, 25.3, 13.8];
+            var sunnyInAugust       = [false, true, false, true, true, false];
+
+            for(var i = 0; i < planetNames.length; i++)
+                {   
+                    document.write("<div class = 'planet'>" + planetNames[i] + "</div>");
+                    document.write(distancesFromEarth[i] + "<br>");
+                    document.write(sunnyInAugust[i] + "<br>");
+                    document.write("----------<br><br>");
+                }
+            
+            document.write("These planets are sunny in August:<br>")
+            for(var i = 0; i < planetNames.length; i++)
+                {
+                 if(sunnyInAugust[i])
+                  {   
+                    document.write("<li id = 'sunny' class = 'planet'>" + planetNames[i] + "</li>");    
+                  }                   
+                }
+        </script>
+    </div> 
+
+</body>
+</html>
